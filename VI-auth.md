@@ -14,7 +14,7 @@ Tất cả các yêu cầu API trong nhóm này đều được thực hiện th
   * `scope`: Quyền hạn yêu cầu (ví dụ: `offline_access` để lấy refresh token).
   * `state`: Chuỗi ngẫu nhiên để chống lỗi CSRF.
   * `nonce` (Tùy chọn): Chuỗi liên kết session với ID Token để chống tấn công phát lại.
-* **Phản hồi thành công (`AuthorizationResponse`):**
+* **Phản hồi thành công (**[AuthorizationResponse](docs/authorization/AuthorizationResponse.md)**):**
   * `code`: Mã ủy quyền (Authorization Code) dùng cho bước tiếp theo.
   * `state`: Trả về đúng giá trị đã gửi trong yêu cầu.
 
@@ -27,7 +27,7 @@ Sử dụng mã ủy quyền có được từ Giai đoạn 1 để đổi lấy
 * **Endpoint:**`POST /token`
 * **Xác thực Client (Header):**
   * `Authorization`: Sử dụng Basic Auth (Chuỗi `client_id:client_secret` được mã hóa Base64).
-* **Tham số thân bài (Body - `TokenRequest`):**
+* **Tham số thân bài (Body - **[TokenRequest](docs/authorization/TokenRequest.md)**):**
   * **Trường hợp cấp mới:**
     * `grant_type`: Cố định là `authorization_code`.
     * `code`: Mã ủy quyền nhận được từ bước trước.

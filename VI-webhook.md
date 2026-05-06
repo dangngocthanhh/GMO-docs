@@ -34,7 +34,7 @@
 
 ### **2. Cấu trúc dữ liệu chính**
 
-#### **2.1 Thông báo giao dịch nạp tiền (**`VaDepositTransactionMessage`)
+#### **2.1 Thông báo giao dịch nạp tiền (****[VaDepositTransactionMessage](docs/webhook/VaDepositTransactionMessage.md)**)
 
 **Cấu trúc này nằm trong danh sách trả về của API Unsent List**.
 
@@ -43,10 +43,10 @@
 | ---------------- | ------------------- | --------------------------------------------------------------- |
 | `message_id`     | **String**          | **ID duy nhất để xác định tin nhắn**.                    |
 | `timestamp`      | **String**          | **Thời gian tạo sự kiện (Định dạng ISO8601)**.           |
-| `account`        | **Object**          | **Thông tin tài khoản nhận tiền chính (**`Account`)**.**  |
-| `va_transaction` | **Object**          | **Chi tiết giao dịch tài khoản ảo (**`VaTransaction`)**.** |
+| **[Account](docs/webhook/Account.md)**        | **Object**          | **Thông tin tài khoản nhận tiền chính (****[Account](docs/webhook/Account.md)**)**.**  |
+| `va_transaction` | **Object**          | **Chi tiết giao dịch tài khoản ảo (****[VaTransaction](docs/webhook/VaTransaction.md)**)**.** |
 
-#### **2.2 Chi tiết tài khoản nhận (**`Account`)
+#### **2.2 Chi tiết tài khoản nhận (****[Account](docs/webhook/Account.md)**)
 
 
 | **Thuộc tính**    | **Mô tả**                      |
@@ -56,7 +56,7 @@
 | `ra_account_number` | **Số tài khoản ngân hàng**. |
 | `ra_holder_name`    | **Tên chủ tài khoản**.       |
 
-#### **2.3 Chi tiết giao dịch tài khoản ảo (**`VaTransaction`)
+#### **2.3 Chi tiết giao dịch tài khoản ảo (****[VaTransaction](docs/webhook/VaTransaction.md)**)
 
 
 | **Thuộc tính**     | **Mô tả**                                                                     |
@@ -71,7 +71,7 @@
 
 ** -------------------------------------------------------------------------------- **
 
-#### **3. Xử lý lỗi (**`ErrorResponse`)
+#### **3. Xử lý lỗi (****[ErrorResponse](docs/webhook/ErrorResponse.md)**)
 
 **Khi yêu cầu thất bại, hệ thống trả về mã lỗi và thông báo chi tiết:**
 
